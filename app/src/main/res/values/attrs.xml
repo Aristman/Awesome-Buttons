@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextButton">
+        <attr name="borderColor" format="color"></attr>
+        <attr name="bgColor" format="color"></attr>
+        <attr name="hoverColor" format="color"></attr>
+        <attr name="borderRadius" format="dimension"></attr>
+        <attr name="borderWidth" format="dimension"></attr>
+        <attr name="animation" format="enum">
+            <enum name="left_to_right_animator" value="0"></enum>
+            <enum name="right_to_left_animator" value="1"></enum>
+            <enum name="center_horizontal_animator" value="2"></enum>
+            <enum name="center_vertical_animator" value="3"></enum>
+            <enum name="diagonal_bottom_left_top_right_animator" value="4"></enum>
+        </attr>
+    </declare-styleable>
+</resources>

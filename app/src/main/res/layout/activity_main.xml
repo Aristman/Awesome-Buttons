@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ru.freeit.awesomebuttons.text.TextButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:borderWidth="1dp"
+        app:borderRadius="20dp"
+        app:animation="left_to_right_animator"
+        android:text="left to right animation"
+        android:layout_margin="16dp" />
+
+    <ru.freeit.awesomebuttons.text.TextButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="right to left animation"
+        app:animation="right_to_left_animator"
+        android:padding="16dp"
+        android:layout_margin="16dp" />
+
+    <ru.freeit.awesomebuttons.text.TextButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:animation="center_vertical_animator"
+        android:padding="16dp"
+        android:text="center vertical animation"
+        android:layout_margin="16dp" />
+
+    <ru.freeit.awesomebuttons.text.TextButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:animation="center_horizontal_animator"
+        android:text="center horizontal animation"
+        android:padding="16dp"
+        android:layout_margin="16dp" />
+
+    <ru.freeit.awesomebuttons.text.TextButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:animation="diagonal_bottom_left_top_right_animator"
+        android:text="diagonal animation"
+        android:padding="16dp"
+        android:layout_margin="16dp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
