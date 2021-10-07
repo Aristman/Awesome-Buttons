@@ -81,6 +81,7 @@ class TextButton @JvmOverloads constructor(ctx: Context, attrs: AttributeSet? = 
                     2 -> CenterHorizontalAnimator(width.toFloat(), height.toFloat())
                     3 -> CenterVerticalAnimator(width.toFloat(), height.toFloat())
                     4 -> DiagonalBottomLeftTopRightAnimator(width.toFloat(), height.toFloat())
+                    5 -> DiagonalTopLeftBottomRightAnimator(width.toFloat(), height.toFloat())
                     else -> LeftToRightAnimator(width.toFloat(), height.toFloat())
                 }
             } finally {

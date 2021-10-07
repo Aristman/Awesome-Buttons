@@ -50,5 +50,13 @@
         android:padding="16dp"
         android:layout_margin="16dp" />
 
+    <ru.freeit.awesomebuttons.text.TextButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:animation="diagonal_top_left_bottom_right_animator"
+        android:text="diagonal animation"
+        android:padding="16dp"
+        android:layout_margin="16dp" />
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
