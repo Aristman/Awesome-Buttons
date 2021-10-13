@@ -15,4 +15,9 @@
             <enum name="diagonal_top_left_bottom_right_animator" value="5"></enum>
         </attr>
     </declare-styleable>
+    <declare-styleable name="IconButton">
+        <attr name="rippleColor" format="color"></attr>
+        <attr name="cornerRadius" format="dimension"></attr>
+        <attr name="bgColor" format="color"></attr>
+    </declare-styleable>
 </resources>

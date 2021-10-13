@@ -7,8 +7,13 @@ plugins {
 android {
     compileSdk 31
 
+    lintOptions {
+        abortOnError false
+    }
+
+
     defaultConfig {
-        minSdk 19
+        minSdk 21
         targetSdk 31
         versionCode 1
         versionName "1.0"
@@ -45,15 +50,28 @@ afterEvaluate {
                 version = '1.0'
             }
             // Creates a Maven publication called “debug”.
-            debug(MavenPublication) {
-                // Applies the component for the debug build variant.
-                from components.debug
+//            debug(MavenPublication) {
+//                // Applies the component for the debug build variant.
+//                from components.debug
+//
+//                groupId = 'ru.freeit.awesome'
+//                artifactId = 'buttons-debug'
+//                version = '1.0'
+//            }
 
-                groupId = 'ru.freeit.awesome'
-                artifactId = 'buttons-debug'
-                version = '1.0'
+        }
+        repositories {
+            maven {
+                url "$buildDir/repo"
             }
         }
+//        repositories {
+//            maven {
+//                // change to point to your repo, e.g. http://my.org/repo
+//                url = "https://github.com/KiberneticWorm/Awesome-Buttons"
+//            }
+//        }
+
     }
 }
 
