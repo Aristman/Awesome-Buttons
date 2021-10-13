@@ -94,3 +94,12 @@ Awesome-Buttons - библиотека красивых анимированны
         android:layout_marginTop="16dp"
         android:layout_width="100dp"
         android:layout_height="100dp" />
+
+## Текущее состояние
+
+На данный момент библиотека еще находится в разработке и поэтому еще не была выложена на *MavenCentral*
+
+Пока вы только можете скопировать исходный код и использовать его:
+
+1. код из пакетов ru.freeit.awesomebuttons.icon.* и ru.freeit.awesomebuttons.text.*
+2. файл attrs.xml из папки ресурсов values
