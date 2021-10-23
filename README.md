@@ -2,6 +2,16 @@
 
 Awesome-Buttons - библиотека красивых анимированных кнопок для Android приложений
 
+## Установка
+
+Добавьте в файл <code>build.gradle</code>, который находится в <code>app</code> модуле: 
+
+    implementation 'io.github.kiberneticworm:awesome-buttons:1.0.1'
+
+И синхронизируйте проект.
+
+Теперь вы можете юзать кнопки с классной анимацией!
+
 ## TextButton
 
 <img src="https://github.com/KiberneticWorm/Awesome-Buttons/blob/master/gifs/text_button_animations.gif" style="width: 50%" />
@@ -94,12 +104,3 @@ Awesome-Buttons - библиотека красивых анимированны
         android:layout_marginTop="16dp"
         android:layout_width="100dp"
         android:layout_height="100dp" />
-
-## Текущее состояние
-
-На данный момент библиотека еще находится в разработке и поэтому еще не была выложена на *MavenCentral*
-
-Пока вы только можете скопировать исходный код и использовать его:
-
-1. код из пакетов ru.freeit.awesomebuttons.icon.* и ru.freeit.awesomebuttons.text.*
-2. файл attrs.xml из папки ресурсов values
