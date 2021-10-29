@@ -8,6 +8,7 @@ import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.MotionEvent
+import android.view.View
 import androidx.annotation.AttrRes
 import androidx.appcompat.widget.AppCompatImageView
 import ru.freeit.awesomebuttons.R
@@ -31,7 +32,14 @@ class IconButton @JvmOverloads constructor(
 
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
-    private val rippleAnimator = RippleAnimator(0f, 350L)
+    private val defaultDuration = 350
+    private val rippleAnimator = RippleAnimator(0f, defaultDuration.toLong())
+
+    private var onClickListener: ((v: View) -> Unit)? = null
+
+    fun setOnClick(listener: (v: View) -> Unit) {
+        this.onClickListener = listener
+    }
 
     init {
         isClickable = true
@@ -41,6 +49,7 @@ class IconButton @JvmOverloads constructor(
                 changeRippleColor(getColor(R.styleable.IconButton_rippleColor, context.themeColor(android.R.attr.colorPrimary)))
                 changeRadius(getDimensionPixelSize(R.styleable.IconButton_cornerRadius, 100).toFloat())
                 changeBgColor(getColor(R.styleable.IconButton_bgColor, Color.TRANSPARENT))
+                changeRippleDuration(getInteger(R.styleable.IconButton_duration, defaultDuration).toLong())
             } finally {
                 recycle()
             }
@@ -90,6 +99,7 @@ class IconButton @JvmOverloads constructor(
                     initial = 0f
                     invalidate()
                 }
+                onClickListener?.invoke(this)
             }
         }
         return true

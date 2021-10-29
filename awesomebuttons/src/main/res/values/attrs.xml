@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <attr name="bgColor" format="color"></attr>
+    <attr name="duration" format="integer"></attr>
+
     <declare-styleable name="TextButton">
         <attr name="borderColor" format="color"></attr>
-        <attr name="bgColor" format="color"></attr>
+        <attr name="bgColor" />
+        <attr name="duration" />
         <attr name="hoverColor" format="color"></attr>
         <attr name="borderRadius" format="dimension"></attr>
         <attr name="borderWidth" format="dimension"></attr>
@@ -15,9 +20,12 @@
             <enum name="diagonal_top_left_bottom_right_animator" value="5"></enum>
         </attr>
     </declare-styleable>
+
     <declare-styleable name="IconButton">
         <attr name="rippleColor" format="color"></attr>
         <attr name="cornerRadius" format="dimension"></attr>
-        <attr name="bgColor" format="color"></attr>
+        <attr name="bgColor" />
+        <attr name="duration" />
     </declare-styleable>
+
 </resources>

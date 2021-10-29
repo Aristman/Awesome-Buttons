@@ -9,6 +9,7 @@ import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.MotionEvent
+import android.view.View
 import androidx.annotation.AttrRes
 import androidx.appcompat.widget.AppCompatTextView
 import ru.freeit.awesomebuttons.R
@@ -29,7 +30,11 @@ class TextButton @JvmOverloads constructor(ctx: Context, attrs: AttributeSet? = 
     private var borderRadius = 5f
     private var borderWidth = 5f
     
-    private var clickListener = mutableListOf<() -> Unit>()
+    private var clickListener: ((v: View) -> Unit)? = null
+
+    fun setOnClick(listener: (v: View) -> Unit) {
+        this.clickListener = listener
+    }
 
     fun changeBorderColor(color: Int) {
         borderColor = color
@@ -104,11 +109,6 @@ class TextButton @JvmOverloads constructor(ctx: Context, attrs: AttributeSet? = 
         style = Paint.Style.FILL
     }
 
-    fun onClick(onClick: () -> Unit) {
-        clickListener.clear()
-        clickListener.add(onClick)
-    }
-
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         animator.changeSize(w.toFloat(), h.toFloat())
@@ -121,7 +121,7 @@ class TextButton @JvmOverloads constructor(ctx: Context, attrs: AttributeSet? = 
                 true
             }
             MotionEvent.ACTION_UP -> {
-                clickListener.firstOrNull()?.invoke()
+                clickListener?.invoke(this)
                 animator.cancel()
                 invalidate()
                 true
